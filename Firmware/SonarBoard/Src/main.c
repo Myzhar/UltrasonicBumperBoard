@@ -80,11 +80,13 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM3_Init();
   MX_TIM4_Init();
+  MX_TIM5_Init();
   MX_TIM10_Init();
   MX_TIM11_Init();
   MX_USART2_UART_Init();
 
   /* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start_IT( &htim5 ); // 100 msec timer
 
   /* USER CODE END 2 */
 
