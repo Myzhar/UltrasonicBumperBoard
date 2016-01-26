@@ -23,6 +23,8 @@ Typical configuration:
 * **PB6** - Echo Sonar #3 [*TMR4 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
 * **PA2** - USART 2 TX
 * **PA3** - USART 2 RX
+* **PC1** - Board Blue PushButton
+* **PA5** - Board Green Led
  
 ## Serial communication
 Baudrate 115200 8N1
