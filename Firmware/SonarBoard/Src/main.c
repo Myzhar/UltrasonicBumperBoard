@@ -37,7 +37,8 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "sonar_handler.h"
+#include "gpio.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -87,7 +88,7 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT( &htim5 ); // 100 msec timer
-
+  initSonar( 4 );
   /* USER CODE END 2 */
 
   /* Infinite loop */
