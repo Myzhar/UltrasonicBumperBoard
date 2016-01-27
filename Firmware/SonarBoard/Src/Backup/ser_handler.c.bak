@@ -26,4 +26,5 @@ void sendMeasures()
   ser_output.sonar_active = sonarCount;
   
   HAL_UART_Transmit( &huart2, (uint8_t*)(&ser_output), sizeof(DataOut), 100 );
+  
 }

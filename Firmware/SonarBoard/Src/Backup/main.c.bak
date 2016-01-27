@@ -59,6 +59,8 @@ void SystemClock_Config(void);
 
 /* USER CODE BEGIN 0 */
 
+static HAL_StatusTypeDef res;
+
 /* USER CODE END 0 */
 
 int main(void)
@@ -107,8 +109,11 @@ int main(void)
     HAL_Delay( 50 ); // 38 msec is the max echo duration
     // <<<<< Sonar reading
     
+    char ch = 'a';
+    res = HAL_UART_Transmit( &huart2, (uint8_t*)(&ch), 1, 100 );
+    
     // >>>>> Serial Output    
-    sendMeasures();
+    //sendMeasures();
     // <<<<< Serial Output
   }
   /* USER CODE END 3 */

@@ -59,6 +59,8 @@ void SystemClock_Config(void);
 
 /* USER CODE BEGIN 0 */
 
+static HAL_StatusTypeDef res;
+
 /* USER CODE END 0 */
 
 int main(void)
@@ -85,7 +87,7 @@ int main(void)
   MX_TIM5_Init();
   MX_TIM10_Init();
   MX_TIM11_Init();
-  MX_USART2_UART_Init();
+  MX_USART1_UART_Init();
 
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT( &htim5 ); // 100 msec timer  

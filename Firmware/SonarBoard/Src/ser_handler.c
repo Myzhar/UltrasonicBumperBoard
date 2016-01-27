@@ -3,8 +3,8 @@
 #include <string.h>
 
 
-#define CTRL_FRAME_0 0xA5
-#define CTRL_FRAME_1 0x5A
+#define CTRL_FRAME_0 0xA55A
+#define CTRL_FRAME_1 0x5AA5
 
 // >>>>> Private Variables
 static DataOut ser_output;
@@ -25,5 +25,5 @@ void sendMeasures()
   
   ser_output.sonar_active = sonarCount;
   
-  HAL_UART_Transmit( &huart2, (uint8_t*)(&ser_output), sizeof(DataOut), 100 );
+  HAL_UART_Transmit( &huart1, (uint8_t*)(&ser_output), sizeof(DataOut), 100 );  
 }
