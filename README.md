@@ -21,8 +21,8 @@ Typical configuration:
 * **PA0** - Echo Sonar #1 [*TMR2 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
 * **PA6** - Echo Sonar #2 [*TMR3 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
 * **PB6** - Echo Sonar #3 [*TMR4 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
-* **PA2** - USART 2 TX
-* **PA3** - USART 2 RX
+* **PA9** - USART 1 TX
+* **PA10** - USART 1 RX
 * **PC1** - Board Blue PushButton
 * **PA5** - Board Green Led
  
