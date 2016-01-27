@@ -37,7 +37,9 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-
+#include "sonar_handler.h"
+#include "ser_handler.h"    
+#include "gpio.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -86,8 +88,9 @@ int main(void)
   MX_USART2_UART_Init();
 
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT( &htim5 ); // 100 msec timer
-
+  HAL_TIM_Base_Start_IT( &htim5 ); // 100 msec timer  
+  initSonar( 4 );
+  initSerOutput();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -97,7 +100,16 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-
+    // >>>>> Sonar reading
+    triggerSonar( COUPLE_0_2 );
+    HAL_Delay( 50 ); // 38 msec is the max echo duration
+    triggerSonar( COUPLE_1_3 );
+    HAL_Delay( 50 ); // 38 msec is the max echo duration
+    // <<<<< Sonar reading
+    
+    // >>>>> Serial Output    
+    sendMeasures();
+    // <<<<< Serial Output
   }
   /* USER CODE END 3 */
 
