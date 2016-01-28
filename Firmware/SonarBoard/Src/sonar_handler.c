@@ -1,6 +1,6 @@
 #include "sonar_handler.h"
 
-#define HALF_SOUND_SPEED_USEC (343.21e-6) // m/usec -> the time is measured in microsecond
+#define HALF_SOUND_SPEED_USEC (171.605e-6) // m/usec -> the time is measured in microsecond
 
 // >>>>> Global Variables
 float distances[MAX_SONAR];
