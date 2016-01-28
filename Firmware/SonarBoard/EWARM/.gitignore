@@ -1,5 +1,0 @@
-*.dep
-*.ewd
-
-'./settings/*'
-'./SonarBoard Configuration/*'

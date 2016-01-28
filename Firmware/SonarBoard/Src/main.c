@@ -59,8 +59,6 @@ void SystemClock_Config(void);
 
 /* USER CODE BEGIN 0 */
 
-static HAL_StatusTypeDef res;
-
 /* USER CODE END 0 */
 
 int main(void)

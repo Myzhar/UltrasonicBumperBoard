@@ -30,3 +30,9 @@
 
 # Debug files
 *.dSYM/
+
+# EWARM
+Firmware/SonarBoard/EWARM/*.dep
+Firmware/SonarBoard/EWARM/zx*
+Firmware/SonarBoard/EWARM/settings/
+Firmware/SonarBoard/EWARM/SonarBoard Configuration/
