@@ -1,0 +1,510 @@
+###############################################################################
+#
+# IAR ELF Linker V7.40.3.8902/W32 for ARM                 01/Feb/2016  13:40:52
+# Copyright 2007-2015 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Exe\SonarBoard32 Configuration.out
+#    Map file     =  
+#        C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration/List\SonarBoard32 Configuration.map
+#    Command line =  
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\gpio.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\leds_handler.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\main.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\ser_handler.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\sonar_handler.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\startup_stm32f303x8.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_cortex.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_dma.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_flash.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_flash_ex.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_gpio.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_msp.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_pwr.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_pwr_ex.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_rcc.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_rcc_ex.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_tim.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_tim_ex.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_uart.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_hal_uart_ex.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\stm32f3xx_it.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\system_stm32f3xx.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\tim.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\tim_handler.o"
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Obj\usart.o" --redirect _Printf=_PrintfFull --redirect
+#        _Scanf=_ScanfFull -o
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration\Exe\SonarBoard32 Configuration.out" --map
+#        "C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32
+#        Configuration/List\SonarBoard32 Configuration.map" --config
+#        C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM/stm32f303x8_flash.icf
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x0800ffff] { ro };
+"P2":  place in [from 0x20000000 to 0x20002fff] { rw, block CSTACK, block HEAP };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                      0x188
+  .intvec            ro code  0x08000000   0x188  startup_stm32f303x8.o [1]
+                            - 0x08000188   0x188
+
+"P1":                                     0x59a4
+  .text              ro code  0x08000188  0x1a84  stm32f3xx_hal_tim.o [1]
+  .text              ro code  0x08001c0c    0xde  main.o [1]
+  .text              ro code  0x08001cec   0x6b8  tim.o [1]
+  .text              ro code  0x080023a4    0x4c  tim_handler.o [1]
+  .text              ro code  0x080023f0   0x73c  stm32f3xx_hal_tim_ex.o [1]
+  .text              ro code  0x08002b2c    0x78  stm32f3xx_hal.o [1]
+  .text              ro code  0x08002ba4    0x70  gpio.o [1]
+  .text              ro code  0x08002c14    0xb0  usart.o [1]
+  .text              ro code  0x08002cc4   0x158  sonar_handler.o [1]
+  .text              ro code  0x08002e1c    0x68  ser_handler.o [1]
+  .text              ro code  0x08002e84  0x1018  stm32f3xx_hal_rcc.o [1]
+  .text              ro code  0x08003e9c   0x330  stm32f3xx_hal_rcc_ex.o [1]
+  .text              ro code  0x080041cc   0x1c2  stm32f3xx_hal_cortex.o [1]
+  .text              ro code  0x08004390   0x370  stm32f3xx_hal_gpio.o [1]
+  .text              ro code  0x08004700    0x14  leds_handler.o [1]
+  .text              ro code  0x08004714    0x34  stm32f3xx_hal_msp.o [1]
+  .text              ro code  0x08004748   0xab0  stm32f3xx_hal_uart.o [1]
+  .text              ro code  0x080051f8    0x4e  FltToDbl.o [4]
+  .text              ro code  0x08005248   0x1a2  DblMul.o [4]
+  .text              ro code  0x080053ec    0x90  DblToFlt.o [4]
+  .text              ro code  0x0800547c    0x76  ABImemcpy_unaligned.o [5]
+  .text              ro code  0x080054f4     0x2  stm32f3xx_hal_uart_ex.o [1]
+  .text              ro code  0x080054f8    0x98  system_stm32f3xx.o [1]
+  .rodata            const    0x08005590    0x70  stm32f3xx_hal_cortex.o [1]
+  .rodata            const    0x08005600    0x70  stm32f3xx_hal_gpio.o [1]
+  .rodata            const    0x08005670    0x70  stm32f3xx_hal_rcc.o [1]
+  .rodata            const    0x080056e0    0x70  stm32f3xx_hal_rcc_ex.o [1]
+  .rodata            const    0x08005750    0x70  stm32f3xx_hal_tim.o [1]
+  .rodata            const    0x080057c0    0x70  stm32f3xx_hal_tim_ex.o [1]
+  .rodata            const    0x08005830    0x70  stm32f3xx_hal_uart.o [1]
+  .text              ro code  0x080058a0    0x68  stm32f3xx_it.o [1]
+  .text              ro code  0x08005908    0x40  zero_init3.o [5]
+  .text              ro code  0x08005948    0x2c  copy_init3.o [5]
+  .text              ro code  0x08005974    0x28  data_init.o [5]
+  .text              ro code  0x0800599c    0x22  fpinit_M.o [4]
+  .iar.init_table    const    0x080059c0    0x24  - Linker created -
+  .text              ro code  0x080059e4    0x1a  cmain.o [5]
+  .text              ro code  0x080059fe     0x4  low_level_init.o [3]
+  .text              ro code  0x08005a02     0x4  exit.o [3]
+  .text              ro code  0x08005a08     0xa  cexit.o [5]
+  .text              ro code  0x08005a14    0x14  exit.o [6]
+  .rodata            const    0x08005a28    0x10  stm32f3xx_hal_rcc.o [1]
+  .rodata            const    0x08005a38    0x10  stm32f3xx_hal_rcc.o [1]
+  .rodata            const    0x08005a48    0x10  stm32f3xx_hal_rcc.o [1]
+  .text              ro code  0x08005a58    0x10  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a68     0xc  cstartup_M.o [5]
+  .text              ro code  0x08005a74     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a78     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a7c     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a80     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a84     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a88     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a8c     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a90     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a94     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a98     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005a9c     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005aa0     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005aa4     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005aa8     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005aac     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ab0     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ab4     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ab8     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005abc     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ac0     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ac4     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ac8     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005acc     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ad0     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ad4     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ad8     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005adc     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ae0     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ae4     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005ae8     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005aec     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005af0     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005af4     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005af8     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005afc     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b00     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b04     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b08     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b0c     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b10     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b14     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b18     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b1c     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b20     0x4  startup_stm32f303x8.o [1]
+  .text              ro code  0x08005b24     0x4  startup_stm32f303x8.o [1]
+  .rodata            const    0x08005b28     0x0  zero_init3.o [5]
+  .rodata            const    0x08005b28     0x0  copy_init3.o [5]
+  Initializer bytes  const    0x08005b28     0x4  <for P2 s0>
+                            - 0x08005b2c  0x59a4
+
+"P2":                                      0x658
+  P2 s0                       0x20000000     0x4  <Init block>
+    .data            inited   0x20000000     0x4  system_stm32f3xx.o [1]
+  .bss               zero     0x20000004    0x70  usart.o [1]
+  .bss               zero     0x20000074    0x3c  tim.o [1]
+  .bss               zero     0x200000b0    0x3c  tim.o [1]
+  .bss               zero     0x200000ec    0x3c  tim.o [1]
+  .bss               zero     0x20000128    0x3c  tim.o [1]
+  .bss               zero     0x20000164    0x3c  tim.o [1]
+  .bss               zero     0x200001a0    0x3c  tim.o [1]
+  .bss               zero     0x200001dc    0x3c  tim.o [1]
+  .bss               zero     0x20000218    0x20  ser_handler.o [1]
+  .bss               zero     0x20000238    0x10  sonar_handler.o [1]
+  .bss               zero     0x20000248     0x4  sonar_handler.o [1]
+  .bss               zero     0x2000024c     0x4  sonar_handler.o [1]
+  .bss               zero     0x20000250     0x4  stm32f3xx_hal.o [1]
+  CSTACK                      0x20000258   0x400  <Block>
+    CSTACK           uninit   0x20000258   0x400  <Block tail>
+                            - 0x20000658   0x658
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x250:
+          0x20000004  0x250
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+          0x08005b28    0x4
+    1 destination range, total size 0x4:
+          0x20000000    0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                   ro code  ro data  rw data
+    ------                   -------  -------  -------
+C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32 Configuration\Obj: [1]
+    gpio.o                       112
+    leds_handler.o                20
+    main.o                       222
+    ser_handler.o                104                32
+    sonar_handler.o              344                24
+    startup_stm32f303x8.o        588
+    stm32f3xx_hal.o              120                 4
+    stm32f3xx_hal_cortex.o       450      112
+    stm32f3xx_hal_gpio.o         880      112
+    stm32f3xx_hal_msp.o           52
+    stm32f3xx_hal_rcc.o        4 120      160
+    stm32f3xx_hal_rcc_ex.o       816      112
+    stm32f3xx_hal_tim.o        6 788      112
+    stm32f3xx_hal_tim_ex.o     1 852      112
+    stm32f3xx_hal_uart.o       2 736      112
+    stm32f3xx_hal_uart_ex.o        2
+    stm32f3xx_it.o               104
+    system_stm32f3xx.o           152        4        4
+    tim.o                      1 720               420
+    tim_handler.o                 76
+    usart.o                      176               112
+    --------------------------------------------------
+    Total:                    21 434      836      596
+
+command line: [2]
+    --------------------------------------------------
+    Total:
+
+dl7M_tlf.a: [3]
+    exit.o                         4
+    low_level_init.o               4
+    --------------------------------------------------
+    Total:                         8
+
+m7M_tls.a: [4]
+    DblMul.o                     418
+    DblToFlt.o                   144
+    FltToDbl.o                    78
+    fpinit_M.o                    34
+    --------------------------------------------------
+    Total:                       674
+
+rt7M_tl.a: [5]
+    ABImemcpy_unaligned.o        118
+    cexit.o                       10
+    cmain.o                       26
+    copy_init3.o                  44
+    cstartup_M.o                  12
+    data_init.o                   40
+    zero_init3.o                  64
+    --------------------------------------------------
+    Total:                       314
+
+shb_l.a: [6]
+    exit.o                        20
+    --------------------------------------------------
+    Total:                        20
+
+    Gaps                          16        2
+    Linker created                         36    1 024
+------------------------------------------------------
+    Grand Total:              22 466      874    1 620
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x080059c0          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x080059e4          --   Gb  - Linker created -
+?main                   0x080059e5         Code  Gb  cmain.o [5]
+CSTACK$$Base            0x20000258          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000658          --   Gb  - Linker created -
+HAL_Delay               0x08002b85   0x18  Code  Wk  stm32f3xx_hal.o [1]
+HAL_GPIO_Init           0x08004391  0x32a  Code  Gb  stm32f3xx_hal_gpio.o [1]
+HAL_GetTick             0x08002b7f    0x6  Code  Wk  stm32f3xx_hal.o [1]
+HAL_IncTick             0x08002b73    0xc  Code  Wk  stm32f3xx_hal.o [1]
+HAL_Init                0x08002b2d   0x22  Code  Gb  stm32f3xx_hal.o [1]
+HAL_InitTick            0x08002b4f   0x24  Code  Wk  stm32f3xx_hal.o [1]
+HAL_MspInit             0x08004715   0x34  Code  Gb  stm32f3xx_hal_msp.o [1]
+HAL_NVIC_EnableIRQ      0x08004303   0x1c  Code  Gb  stm32f3xx_hal_cortex.o [1]
+HAL_NVIC_SetPriority    0x080042c5   0x3e  Code  Gb  stm32f3xx_hal_cortex.o [1]
+HAL_NVIC_SetPriorityGrouping
+                        0x0800429d   0x28  Code  Gb  stm32f3xx_hal_cortex.o [1]
+HAL_RCCEx_PeriphCLKConfig
+                        0x08003e9d  0x30c  Code  Gb  stm32f3xx_hal_rcc_ex.o [1]
+HAL_RCC_ClockConfig     0x0800383d  0x522  Code  Gb  stm32f3xx_hal_rcc.o [1]
+HAL_RCC_GetHCLKFreq     0x08003de1   0x2c  Code  Gb  stm32f3xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK1Freq    0x08003e11   0x26  Code  Gb  stm32f3xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK2Freq    0x08003e37   0x26  Code  Gb  stm32f3xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                        0x08003d5f   0x82  Code  Gb  stm32f3xx_hal_rcc.o [1]
+HAL_RCC_OscConfig       0x08002e85  0x9a0  Code  Gb  stm32f3xx_hal_rcc.o [1]
+HAL_SYSTICK_CLKSourceConfig
+                        0x0800432b   0x36  Code  Gb  stm32f3xx_hal_cortex.o [1]
+HAL_SYSTICK_Callback    0x0800438d    0x2  Code  Wk  stm32f3xx_hal_cortex.o [1]
+HAL_SYSTICK_Config      0x0800431f    0xc  Code  Gb  stm32f3xx_hal_cortex.o [1]
+HAL_SYSTICK_IRQHandler  0x08004385    0x8  Code  Gb  stm32f3xx_hal_cortex.o [1]
+HAL_TIMEx_BreakCallback
+                        0x08002a31    0x2  Code  Wk  stm32f3xx_hal_tim_ex.o [1]
+HAL_TIMEx_CommutationCallback
+                        0x08002a2f    0x2  Code  Wk  stm32f3xx_hal_tim_ex.o [1]
+HAL_TIMEx_ConfigBreakDeadTime
+                        0x0800286d  0x1c2  Code  Gb  stm32f3xx_hal_tim_ex.o [1]
+HAL_TIMEx_MasterConfigSynchronization
+                        0x080026e9  0x184  Code  Gb  stm32f3xx_hal_tim_ex.o [1]
+HAL_TIM_Base_Init       0x08000189   0xd8  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_Base_MspInit    0x0800215b  0x20e  Code  Gb  tim.o [1]
+HAL_TIM_Base_Start_IT   0x08000261   0x7a  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_ConfigClockSource
+                        0x08000ba1  0x512  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_IC_CaptureCallback
+                        0x080023b7   0x24  Code  Gb  tim_handler.o [1]
+HAL_TIM_IC_ConfigChannel
+                        0x0800097b  0x20a  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_IC_Init         0x080004e5   0xd2  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_IC_MspInit      0x080005c5    0x2  Code  Wk  stm32f3xx_hal_tim.o [1]
+HAL_TIM_IC_Start_IT     0x080005cd   0xfa  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_IRQHandler      0x08000805  0x176  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_OC_DelayElapsedCallback
+                        0x080012c9    0x2  Code  Wk  stm32f3xx_hal_tim.o [1]
+HAL_TIM_OnePulse_Init   0x080006d9  0x106  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_OnePulse_MspInit
+                        0x080007df    0x2  Code  Wk  stm32f3xx_hal_tim.o [1]
+HAL_TIM_PWM_ConfigChannel
+                        0x080023f1  0x2f8  Code  Gb  stm32f3xx_hal_tim_ex.o [1]
+HAL_TIM_PWM_Init        0x08000301   0xde  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_PWM_MspInit     0x080003df    0x2  Code  Wk  stm32f3xx_hal_tim.o [1]
+HAL_TIM_PWM_PulseFinishedCallback
+                        0x080012cb    0x2  Code  Wk  stm32f3xx_hal_tim.o [1]
+HAL_TIM_PWM_Start       0x080003e1   0xee  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_PeriodElapsedCallback
+                        0x080023a5   0x12  Code  Gb  tim_handler.o [1]
+HAL_TIM_ReadCapturedValue
+                        0x080011a1  0x11e  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_SlaveConfigSynchronization
+                        0x080010b3   0xee  Code  Gb  stm32f3xx_hal_tim.o [1]
+HAL_TIM_TriggerCallback
+                        0x080012cd    0x2  Code  Wk  stm32f3xx_hal_tim.o [1]
+HAL_UARTEx_WakeupCallback
+                        0x080054f5    0x2  Code  Wk  stm32f3xx_hal_uart_ex.o [1]
+HAL_UART_ErrorCallback  0x08004a1d    0x2  Code  Wk  stm32f3xx_hal_uart.o [1]
+HAL_UART_IRQHandler     0x08004905  0x114  Code  Gb  stm32f3xx_hal_uart.o [1]
+HAL_UART_Init           0x08004749   0xd4  Code  Gb  stm32f3xx_hal_uart.o [1]
+HAL_UART_MspInit        0x08002c5d   0x5a  Code  Gb  usart.o [1]
+HAL_UART_RxCpltCallback
+                        0x08004a1b    0x2  Code  Wk  stm32f3xx_hal_uart.o [1]
+HAL_UART_Transmit       0x0800481d   0xe8  Code  Gb  stm32f3xx_hal_uart.o [1]
+HAL_UART_TxCpltCallback
+                        0x08004a19    0x2  Code  Wk  stm32f3xx_hal_uart.o [1]
+MX_GPIO_Init            0x08002ba5   0x70  Code  Gb  gpio.o [1]
+MX_TIM15_Init           0x08001f4d   0xb8  Code  Gb  tim.o [1]
+MX_TIM16_Init           0x08002005   0xac  Code  Gb  tim.o [1]
+MX_TIM17_Init           0x080020b1   0xaa  Code  Gb  tim.o [1]
+MX_TIM1_Init            0x08001ced   0xbc  Code  Gb  tim.o [1]
+MX_TIM2_Init            0x08001da9   0xb0  Code  Gb  tim.o [1]
+MX_TIM3_Init            0x08001e59   0xb0  Code  Gb  tim.o [1]
+MX_TIM6_Init            0x08001f09   0x44  Code  Gb  tim.o [1]
+MX_USART1_UART_Init     0x08002c15   0x48  Code  Gb  usart.o [1]
+NVIC_EnableIRQ          0x080041f5   0x14  Code  Lc  stm32f3xx_hal_cortex.o [1]
+NVIC_EncodePriority     0x0800422f   0x3e  Code  Lc  stm32f3xx_hal_cortex.o [1]
+NVIC_GetPriorityGrouping
+                        0x080041eb    0xa  Code  Lc  stm32f3xx_hal_cortex.o [1]
+NVIC_SetPriority        0x08004209   0x26  Code  Lc  stm32f3xx_hal_cortex.o [1]
+NVIC_SetPriorityGrouping
+                        0x080041cd   0x1e  Code  Lc  stm32f3xx_hal_cortex.o [1]
+Region$$Table$$Base     0x080059c0          --   Gb  - Linker created -
+Region$$Table$$Limit    0x080059e4          --   Gb  - Linker created -
+SysTick_Config          0x0800426d   0x30  Code  Lc  stm32f3xx_hal_cortex.o [1]
+SysTick_Handler         0x080058a1    0xc  Code  Gb  stm32f3xx_it.o [1]
+SystemClock_Config      0x08001c6d   0x7c  Code  Gb  main.o [1]
+SystemCoreClock         0x20000000    0x4  Data  Gb  system_stm32f3xx.o [1]
+SystemInit              0x080054f9   0x70  Code  Gb  system_stm32f3xx.o [1]
+TIM1_BRK_TIM15_IRQHandler
+                        0x080058ad   0x10  Code  Gb  stm32f3xx_it.o [1]
+TIM1_CC_IRQHandler      0x080058bd    0xa  Code  Gb  stm32f3xx_it.o [1]
+TIM2_IRQHandler         0x080058c7    0xa  Code  Gb  stm32f3xx_it.o [1]
+TIM3_IRQHandler         0x080058d1    0xa  Code  Gb  stm32f3xx_it.o [1]
+TIM6_DAC1_IRQHandler    0x080058e5    0xa  Code  Gb  stm32f3xx_it.o [1]
+TIM_Base_SetConfig      0x080012cf   0x7c  Code  Gb  stm32f3xx_hal_tim.o [1]
+TIM_CCxChannelCmd       0x08001b73   0x76  Code  Gb  stm32f3xx_hal_tim.o [1]
+TIM_ETR_SetConfig       0x08001b57   0x1c  Code  Gb  stm32f3xx_hal_tim.o [1]
+TIM_ITRx_SetConfig      0x08001b41   0x16  Code  Lc  stm32f3xx_hal_tim.o [1]
+TIM_OC1_SetConfig       0x08001351   0xe4  Code  Gb  stm32f3xx_hal_tim.o [1]
+TIM_OC2_SetConfig       0x08001435   0xd6  Code  Gb  stm32f3xx_hal_tim.o [1]
+TIM_OC3_SetConfig       0x08001511   0xd4  Code  Gb  stm32f3xx_hal_tim.o [1]
+TIM_OC4_SetConfig       0x080015f9   0x90  Code  Gb  stm32f3xx_hal_tim.o [1]
+TIM_OC5_SetConfig       0x08002a33   0x5e  Code  Lc  stm32f3xx_hal_tim_ex.o [1]
+TIM_OC6_SetConfig       0x08002a93   0x60  Code  Lc  stm32f3xx_hal_tim_ex.o [1]
+TIM_SlaveTimer_SetConfig
+                        0x0800168d  0x33e  Code  Lc  stm32f3xx_hal_tim.o [1]
+TIM_TI1_ConfigInputStage
+                        0x08001a2f   0x2c  Code  Lc  stm32f3xx_hal_tim.o [1]
+TIM_TI1_SetConfig       0x080019cb   0x64  Code  Gb  stm32f3xx_hal_tim.o [1]
+TIM_TI2_ConfigInputStage
+                        0x08001a99   0x2e  Code  Lc  stm32f3xx_hal_tim.o [1]
+TIM_TI2_SetConfig       0x08001a5b   0x3e  Code  Lc  stm32f3xx_hal_tim.o [1]
+TIM_TI3_SetConfig       0x08001ac7   0x3c  Code  Lc  stm32f3xx_hal_tim.o [1]
+TIM_TI4_SetConfig       0x08001b03   0x3e  Code  Lc  stm32f3xx_hal_tim.o [1]
+UART_AdvFeatureConfig   0x08004d51  0x200  Code  Gb  stm32f3xx_hal_uart.o [1]
+UART_CheckIdleState     0x08004f51   0x58  Code  Gb  stm32f3xx_hal_uart.o [1]
+UART_EndTransmit_IT     0x080050ff   0x30  Code  Gb  stm32f3xx_hal_uart.o [1]
+UART_Receive_IT         0x0800512f   0xa6  Code  Gb  stm32f3xx_hal_uart.o [1]
+UART_SetConfig          0x08004a31  0x320  Code  Gb  stm32f3xx_hal_uart.o [1]
+UART_Transmit_IT        0x08005087   0x78  Code  Gb  stm32f3xx_hal_uart.o [1]
+UART_WaitOnFlagUntilTimeout
+                        0x08004fa9   0xde  Code  Gb  stm32f3xx_hal_uart.o [1]
+USART1_IRQHandler       0x080058db    0xa  Code  Gb  stm32f3xx_it.o [1]
+__aeabi_d2f             0x080053ed         Code  Gb  DblToFlt.o [4]
+__aeabi_dmul            0x08005249         Code  Gb  DblMul.o [4]
+__aeabi_f2d             0x080051f9         Code  Gb  FltToDbl.o [4]
+__cmain                 0x080059e5         Code  Gb  cmain.o [5]
+__exit                  0x08005a15   0x14  Code  Gb  exit.o [6]
+__iar_copy_init3        0x08005949   0x2c  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x08005975   0x28  Code  Gb  data_init.o [5]
+__iar_init_vfp          0x0800599d         Code  Gb  fpinit_M.o [4]
+__iar_program_start     0x08005a69         Code  Gb  cstartup_M.o [5]
+__iar_unaligned___aeabi_memcpy
+                        0x0800547d         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy4
+                        0x0800549d         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_unaligned___aeabi_memcpy8
+                        0x0800549d         Code  Gb  ABImemcpy_unaligned.o [5]
+__iar_zero_init3        0x08005909   0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x080059ff    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000         Data  Gb  startup_stm32f303x8.o [1]
+_call_main              0x080059f1         Code  Gb  cmain.o [5]
+_exit                   0x08005a09         Code  Gb  cexit.o [5]
+_main                   0x080059fb         Code  Gb  cmain.o [5]
+aAPBAHBPrescTable       0x08005a28   0x10  Data  Gb  stm32f3xx_hal_rcc.o [1]
+aPLLMULFactorTable      0x08005a38   0x10  Data  Gb  stm32f3xx_hal_rcc.o [1]
+aPredivFactorTable      0x08005a48   0x10  Data  Gb  stm32f3xx_hal_rcc.o [1]
+assert_failed           0x08001ce9    0x2  Code  Gb  main.o [1]
+distValid               0x20000248    0x4  Data  Gb  sonar_handler.o [1]
+distances               0x20000238   0x10  Data  Gb  sonar_handler.o [1]
+exit                    0x08005a03    0x4  Code  Gb  exit.o [3]
+htim1                   0x20000074   0x3c  Data  Gb  tim.o [1]
+htim15                  0x20000164   0x3c  Data  Gb  tim.o [1]
+htim16                  0x200001a0   0x3c  Data  Gb  tim.o [1]
+htim17                  0x200001dc   0x3c  Data  Gb  tim.o [1]
+htim2                   0x200000b0   0x3c  Data  Gb  tim.o [1]
+htim3                   0x200000ec   0x3c  Data  Gb  tim.o [1]
+htim6                   0x20000128   0x3c  Data  Gb  tim.o [1]
+huart1                  0x20000004   0x70  Data  Gb  usart.o [1]
+initSerOutput           0x08002e1d   0x1e  Code  Gb  ser_handler.o [1]
+initSonar               0x08002cc5   0x62  Code  Gb  sonar_handler.o [1]
+main                    0x08001c0d   0x5c  Code  Gb  main.o [1]
+onNewMeasureReceived    0x08002d77   0x74  Code  Gb  sonar_handler.o [1]
+sendMeasures            0x08002e3b   0x30  Code  Gb  ser_handler.o [1]
+ser_output              0x20000218   0x20  Data  Lc  ser_handler.o [1]
+sonarCount              0x2000024c    0x4  Data  Gb  sonar_handler.o [1]
+toggleLedNucleo         0x08004701    0xe  Code  Gb  leds_handler.o [1]
+triggerSonar            0x08002d27   0x50  Code  Gb  sonar_handler.o [1]
+uwTick                  0x20000250    0x4  Data  Lc  stm32f3xx_hal.o [1]
+
+
+[1] = C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32\EWARM\SonarBoard32 Configuration\Obj
+[2] = command line
+[3] = dl7M_tlf.a
+[4] = m7M_tls.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  22 466 bytes of readonly  code memory
+     874 bytes of readonly  data memory
+   1 620 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
