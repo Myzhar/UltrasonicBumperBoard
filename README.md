@@ -34,6 +34,8 @@ Typical configuration:
 * **PC1** - Board Blue PushButton
 * **PA5** - Board Green Led
 
+![alt tag](https://github.com/Myzhar/SonarBoard/blob/develop/Images/STm32F401.PNG)
+
 ### Nucleo32
 * **PA6** - Trigger Sonar #0 #2 [*TMR16 CH1 PWM SINGLE SHOT*] 
 * **PA7** - Trigger Sonar #1 #3 [*TMR17 CH1 PWM SINGLE SHOT*] 
@@ -46,6 +48,8 @@ Typical configuration:
 * **PB3** - Board Green Led
  
 **NOTE:** To enable the input pin for *Sonar #3 echo* on **PA2** you need to open **SB3** and **SB2**, disabling USART2 for Virtual COM Port - [For further information see Table 6 on document **UM1956** "STM32 Nucleo-32 boards - User Manual" - http://www.st.com/st-web-ui/static/active/en/resource/technical/document/user_manual/DM00231744.pdf] 
+
+![alt tag](https://github.com/Myzhar/SonarBoard/blob/develop/Images/STm32F303.PNG)
 
 ## Serial communication
 Baudrate 115200 8N1
