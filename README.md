@@ -1,5 +1,5 @@
 # SonarBoard
-Firmware for STM32F401 Nucleo board to handle up to four HC-SR04 Sonar Sensor
+Firmware for **STM32F401 Nucleo64** board and **STm32F303 Nucleo32** board to handle up to four **HC-SR04** sonar sensors
 
 ## Sonar Configuration
 The sonars are driven coupled two by two to avoid echo interferences. 
@@ -15,6 +15,7 @@ Typical configuration:
   - The sonar **#1** and the sonar **#3** receive the same trigger
 
 ## Pinout
+### Nucleo64
 * **PB8** - Trigger Sonar #0 #2 [*TMR11 CH1 PWM SINGLE SHOT*] 
 * **PB9** - Trigger Sonar #1 #3 [*TMR10 CH1 PWM SINGLE SHOT*] 
 * **PA8** - Echo Sonar #0 [*TMR1 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
@@ -25,7 +26,18 @@ Typical configuration:
 * **PA10** - USART 1 RX
 * **PC1** - Board Blue PushButton
 * **PA5** - Board Green Led
- 
+
+### Nucleo32
+* **PA12** - Trigger Sonar #0 #2 [*TMR16 CH1 PWM SINGLE SHOT*] 
+* **PA7** - Trigger Sonar #1 #3 [*TMR17 CH1 PWM SINGLE SHOT*] 
+* **PA8** - Echo Sonar #0 [*TMR1 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
+* **PA0** - Echo Sonar #1 [*TMR2 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
+* **PA6** - Echo Sonar #2 [*TMR3 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
+* **PA2** - Echo Sonar #3 [*TMR15 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
+* **PA9** - USART 1 TX
+* **PA10** - USART 1 RX
+* **PB3** - Board Green Led
+
 ## Serial communication
 Baudrate 115200 8N1
  
