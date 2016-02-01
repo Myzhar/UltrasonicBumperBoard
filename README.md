@@ -1,8 +1,15 @@
 # SonarBoard
 Firmware for **STM32F401 Nucleo64** board and **STm32F303 Nucleo32** board to handle up to four **HC-SR04** sonar sensors
 
+## Description
+*HC-SR04* sonar is a 2-wires driver distance sensor. It is triggered by a TTL 10 microsec pulse on *"Trig"* pin and the measured distance is proportional to the echo pulse received on the *"Echo"* pin.
+
+* The Trig pulse is generated using a PWM timers programmed in "One Pulse mode".
+* The Echo duration is measured using a timer in "Input Capture" coupling two channels: channel 1 triggers on rising edge on echo reception, channel 2 triggers on falling edge when the echo stops.
+
 ## Sonar Configuration
-The sonars are driven coupled two by two to avoid echo interferences. 
+The sonars are driven coupled two by two to avoid echo interferences, only two triggers are generated to enable two sonars, 4 timers are required to measure the 4 echos.
+
 Typical configuration:
 
           --- Sonar #0 ----------- Sonar #1 ---
