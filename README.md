@@ -47,7 +47,9 @@ Typical configuration:
 * **PA10** - USART 1 RX
 * **PB3** - Board Green Led
  
-**NOTE:** To enable the input pin for *Sonar #3 echo* on **PA2** you need to open **SB3** and **SB2**, disabling USART2 for Virtual COM Port - [For further information see Table 6 on document **UM1956** "STM32 Nucleo-32 boards - User Manual" - http://www.st.com/st-web-ui/static/active/en/resource/technical/document/user_manual/DM00231744.pdf] 
+**NOTE #1:** The Nucleo32 board is powered by an external 5V power supply, so **SB1** must be opened.
+
+**NOTE #2:** To enable the input pin for *Sonar #3 echo* on **PA2** you need to open **SB3** and **SB2**, disabling USART2 for Virtual COM Port - [For further information see Table 6 on document **UM1956** "STM32 Nucleo-32 boards - User Manual" - http://www.st.com/st-web-ui/static/active/en/resource/technical/document/user_manual/DM00231744.pdf] 
 
 ![alt tag](https://github.com/Myzhar/SonarBoard/blob/develop/Images/STm32F303.PNG)
 
