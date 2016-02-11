@@ -58,7 +58,7 @@ void SystemClock_Config(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-
+uint32_t elapsed = 0;
 /* USER CODE END 0 */
 
 int main(void)
@@ -88,7 +88,7 @@ int main(void)
   MX_USART1_UART_Init();
 
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT( &htim6 ); // 100 msec timer  
+  //HAL_TIM_Base_Start_IT( &htim6 ); // 100 msec timer  
   initSonar( 4 );
   initSerOutput();
   /* USER CODE END 2 */
@@ -100,14 +100,30 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
+    uint32_t start = HAL_GetTick();
+    elapsed = 0;
+    
     // >>>>> Sonar reading
     triggerSonar( COUPLE_0_2 );
-    HAL_Delay( 50 ); // 38 msec is the max echo duration
+    //waitEcho( COUPLE_0_2 );
+    HAL_Delay( 50 );
     triggerSonar( COUPLE_1_3 );
-    HAL_Delay( 50 ); // 38 msec is the max echo duration
+    //waitEcho( COUPLE_1_3 );
+    HAL_Delay( 50 );
     // <<<<< Sonar reading
     
+    /*while( !(distValid[0]==1 &&
+           distValid[1]==1 &&
+           distValid[2]==1&&
+           distValid[3]==1 )  )
+    {
+      elapsed = HAL_GetTick() - start;
+      if( elapsed > 100 )
+        break;
+    }*/
+    
     // >>>>> Serial Output    
+    convertMeasures(); 
     sendMeasures();
     // <<<<< Serial Output
   }

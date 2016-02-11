@@ -58,7 +58,7 @@ void MX_TIM1_Init(void)
   TIM_IC_InitTypeDef sConfigIC;
 
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 63;
+  htim1.Init.Prescaler = 630;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim1.Init.Period = 65535;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -101,7 +101,7 @@ void MX_TIM2_Init(void)
   TIM_IC_InitTypeDef sConfigIC;
 
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 63;
+  htim2.Init.Prescaler = 630;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 65535;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -142,7 +142,7 @@ void MX_TIM3_Init(void)
   TIM_IC_InitTypeDef sConfigIC;
 
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 63;
+  htim3.Init.Prescaler = 630;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 65535;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -199,7 +199,7 @@ void MX_TIM15_Init(void)
   TIM_IC_InitTypeDef sConfigIC;
 
   htim15.Instance = TIM15;
-  htim15.Init.Prescaler = 63;
+  htim15.Init.Prescaler = 630;
   htim15.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim15.Init.Period = 65535;
   htim15.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -374,7 +374,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
     __TIM3_CLK_ENABLE();
   
     /**TIM3 GPIO Configuration    
-    PA6     ------> TIM3_CH1 
+    PB4     ------> TIM3_CH1 
     */
     GPIO_InitStruct.Pin = ECHO_SONAR_2_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -439,7 +439,7 @@ void HAL_TIM_Base_MspInit(TIM_HandleTypeDef* htim_base)
     __TIM16_CLK_ENABLE();
   
     /**TIM16 GPIO Configuration    
-    PA12     ------> TIM16_CH1 
+    PA6     ------> TIM16_CH1 
     */
     GPIO_InitStruct.Pin = TRIGGER_SONAR_0_2_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -536,7 +536,7 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
     __TIM3_CLK_DISABLE();
   
     /**TIM3 GPIO Configuration    
-    PA6     ------> TIM3_CH1 
+    PB4     ------> TIM3_CH1 
     */
     HAL_GPIO_DeInit(ECHO_SONAR_2_GPIO_Port, ECHO_SONAR_2_Pin);
 
@@ -597,7 +597,7 @@ void HAL_TIM_Base_MspDeInit(TIM_HandleTypeDef* htim_base)
     __TIM16_CLK_DISABLE();
   
     /**TIM16 GPIO Configuration    
-    PA12     ------> TIM16_CH1 
+    PA6     ------> TIM16_CH1 
     */
     HAL_GPIO_DeInit(TRIGGER_SONAR_0_2_GPIO_Port, TRIGGER_SONAR_0_2_Pin);
 

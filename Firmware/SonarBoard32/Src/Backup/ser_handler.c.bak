@@ -21,7 +21,7 @@ void initSerOutput()
 void sendMeasures()
 {
   ser_output.ticks = HAL_GetTick();
-  memcpy( ser_output.distances, distances, MAX_SONAR*sizeof(float) );
+  memcpy( (void*)ser_output.distances, (void*)distances, MAX_SONAR*sizeof(float) );
   
   ser_output.sonar_active = sonarCount;
   

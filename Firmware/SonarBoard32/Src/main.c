@@ -61,9 +61,9 @@ void SystemClock_Config(void);
 
 /* USER CODE END 0 */
 
+
 int main(void)
 {
-
   /* USER CODE BEGIN 1 */
   
   /* USER CODE END 1 */
@@ -89,7 +89,7 @@ int main(void)
 
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT( &htim6 ); // 100 msec timer  
-  initSonar( 4 );
+  initSonar( MAX_SONAR );
   initSerOutput();
   /* USER CODE END 2 */
 
@@ -99,15 +99,16 @@ int main(void)
   {
   /* USER CODE END WHILE */
 
-  /* USER CODE BEGIN 3 */
+  /* USER CODE BEGIN 3 */ 
     // >>>>> Sonar reading
     triggerSonar( COUPLE_0_2 );
-    HAL_Delay( 50 ); // 38 msec is the max echo duration
+    HAL_Delay( 49 );
     triggerSonar( COUPLE_1_3 );
-    HAL_Delay( 50 ); // 38 msec is the max echo duration
+    HAL_Delay( 49 );
     // <<<<< Sonar reading
     
     // >>>>> Serial Output    
+    convertMeasures(); 
     sendMeasures();
     // <<<<< Serial Output
   }
