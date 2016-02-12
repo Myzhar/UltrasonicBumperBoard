@@ -1,5 +1,5 @@
 # SonarBoard
-Firmware for **STM32F401 Nucleo64** board and **STm32F303 Nucleo32** board to handle up to four **HC-SR04** ultrasonic range sensors
+Firmware for **STm32F303 Nucleo32** board to handle up to four **HC-SR04** ultrasonic range sensors
 
 ## Description
 *HC-SR04* module is a 2-wires driven distance sensor. It is triggered by a TTL 10 microsec pulse on *"Trig"* pin and the measured distance is proportional to the duration of the echo pulse received on the *"Echo"* pin.
@@ -22,19 +22,6 @@ Typical configuration:
   - The sensor **#1** and the sensor **#3** receive the same trigger
 
 ## Pinout
-### Nucleo64
-* **PB8** - Trigger sensor #0 #2 [*TMR11 CH1 PWM SINGLE SHOT*] 
-* **PB9** - Trigger sensor #1 #3 [*TMR10 CH1 PWM SINGLE SHOT*] 
-* **PA8** - Echo sensor #0 [*TMR1 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
-* **PA0** - Echo sensor #1 [*TMR2 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
-* **PA6** - Echo sensor #2 [*TMR3 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
-* **PB6** - Echo sensor #3 [*TMR4 CH1 INPUT CAPTURE DIRECT - CH2 INPUT CAPTURE INDIRECT*]
-* **PA9** - USART 1 TX
-* **PA10** - USART 1 RX
-* **PC1** - Board Blue PushButton
-* **PA5** - Board Green Led
-
-![alt tag](https://github.com/Myzhar/SonarBoard/blob/develop/Images/STm32F401.PNG)
 
 ### Nucleo32
 * **PA6** - Trigger sensor #0 #2 [*TMR16 CH1 PWM SINGLE SHOT*] 

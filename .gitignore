@@ -1,6 +1,5 @@
 # IAR EWARM intermediate folders and files. by hwpark
 Firmware/SonarBoard32/EWARM/settings
-Firmware/SonarBoard64/EWARM/settings
 *.dep
 Debug
 Release
