@@ -1,38 +1,41 @@
-# Object files
-*.o
-*.ko
+# IAR EWARM intermediate folders and files. by hwpark
+Firmware/SonarBoard32/EWARM/settings
+Firmware/SonarBoard64/EWARM/settings
+*.dep
+Debug
+Release
+ewarm
+zx*
+*.dni
+*.dbgdt
+*.wsdt
+
+# Etc.
+SourceInsightProj
+Bootloader
+*.tmp
+
+
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files build by Visual Studio
 *.obj
-*.elf
-
-# Precompiled Headers
-*.gch
+*.pdb
+*.user
+*.aps
 *.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
 *.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-
-# EWARM
-Firmware/SonarBoard/EWARM/*.dep
-Firmware/SonarBoard/EWARM/zx*
-Firmware/SonarBoard/EWARM/settings/
-Firmware/SonarBoard/EWARM/SonarBoard Configuration/
+*.lib
+*.sbr
+*.dep
