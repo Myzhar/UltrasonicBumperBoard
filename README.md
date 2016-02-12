@@ -44,5 +44,37 @@ Typical configuration:
 Baudrate 115200 8N1
  
 ### Serial output
+To emit range measures the board uses a binary protocol:
+* *Unsigned int 16 bit* **Sync word** [0x5AA5]
+* *Unsigned int 32 bit* **number of bytes following** [30]
+* *Unsigned int 32 bit* **ticks since system start**
+* *float* **not_valid_val** the float value used for not valid measured ranges
+* *float* **Sensor #0**
+* *float* **Sensor #1**
+* *float* **Sensor #2**
+* *float* **Sensor #3**
+* *Unsigned int 16 bit* **Number of sonar connected** 
+* *Unsigned int 16 bit* **Termination word** [<LF><CR>]
+
+The data is mapped by the following C/C++ structure:  
+```
+typedef struct _data_out
+{
+    uint16_t ctrl_frame_0;        // SYNC WORD [0x5AA5]
+    uint16_t byte_count;          // number of bytes following [30]
+    uint32_t ticks;               // ticks since system start
+    float not_valid_val;          // value for not valid distances
+    float distances[MAX_SONAR];   // distances in meters
+    uint16_t sonar_active;        // Number of sonar connected
+    uint16_t ctrl_frame_1;        // TERMINATION WORD [<LF><CR>]
+} DataOut;
+
+[...]
+DataOut data;
+char buf[33];
+memcpy( buf, &data, sizeof(DataOut) );
+[...]
+```
 
 ### Serial input
+*No input allowed yet*
