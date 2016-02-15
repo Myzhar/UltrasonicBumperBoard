@@ -1,6 +1,6 @@
-Configuration	SonarBoard32
+Configuration	UltrasonicBumperBoard32
 STM32CubeMX 	4.12.0
-Date	02/01/2016
+Date	02/15/2016
 MCU	STM32F303K8Tx
 
 
@@ -58,9 +58,9 @@ Pin Nb	PINs	FUNCTIONs	LABELs
 SOFTWARE PROJECT
 
 Project Settings : 
-Project Name : SonarBoard32
-Project Folder : C:\devel\Walter\Github\SonarBoard\Firmware\SonarBoard32
-Toolchain / IDE : EWARM
+Project Name : UltrasonicBumperBoard32
+Project Folder : C:\devel\Walter\Github\SonarBoard\Firmware\UltrasonicBumperBoard32
+Toolchain / IDE : SW4STM32
 Firmware Package Name and Version : STM32Cube FW_F3 V1.4.0
 
 
