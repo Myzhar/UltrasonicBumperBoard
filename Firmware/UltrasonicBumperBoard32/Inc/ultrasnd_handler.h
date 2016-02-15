@@ -1,5 +1,5 @@
-#ifndef SONAR_HANDLER_H
-#define SONAR_HANDLER_H
+#ifndef ULTRASND_HANDLER_H
+#define ULTRASND_HANDLER_H
 #include "tim.h"
 
 #define MAX_DURATION_10_USEC 2500 ///< Max duration of the echo: 25 msec -> about 4 m

@@ -37,7 +37,7 @@
 #include "gpio.h"
 
 /* USER CODE BEGIN Includes */
-#include "sonar_handler.h"
+#include "ultrasnd_handler.h"
 #include "ser_handler.h"    
 #include "gpio.h"
 /* USER CODE END Includes */
@@ -61,9 +61,9 @@ void SystemClock_Config(void);
 
 /* USER CODE END 0 */
 
-
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
   
   /* USER CODE END 1 */
@@ -99,7 +99,7 @@ int main(void)
   {
   /* USER CODE END WHILE */
 
-  /* USER CODE BEGIN 3 */ 
+  /* USER CODE BEGIN 3 */
     // >>>>> Sonar reading
     triggerSonar( COUPLE_0_2 );
     HAL_Delay( 49 );
