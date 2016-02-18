@@ -33,7 +33,7 @@ void initSonar( int sonar_count );
 
 /*! brief Emits trigger for a couple of sonars
  *
- * @param couple a caouple of sonars [@ref COUPLE_0_2 or @ref COUPLE_1_3]
+ * @param couple a couple of sonars [@ref COUPLE_0_2 or @ref COUPLE_1_3]
  */
 void triggerSonar( int couple );
 
