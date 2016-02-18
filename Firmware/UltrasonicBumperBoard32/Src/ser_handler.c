@@ -20,6 +20,7 @@ void initSerOutput()
 
 void sendMeasures()
 {
+	int i=0;
   ser_output.ticks = HAL_GetTick();
   memcpy( (void*)ser_output.distances, (void*)distances, MAX_SONAR*sizeof(float) );
   
@@ -28,7 +29,7 @@ void sendMeasures()
   HAL_UART_Transmit( &huart1, (uint8_t*)(&ser_output), sizeof(DataOut), 100 );  
   
   // >>>>> Invalidate measures
-  for( int i=0; i<MAX_SONAR; i++ )
+  for( i=0; i<MAX_SONAR; i++ )
   {
     distances[i]=NOT_VALID;
     distValid[i] = 0;

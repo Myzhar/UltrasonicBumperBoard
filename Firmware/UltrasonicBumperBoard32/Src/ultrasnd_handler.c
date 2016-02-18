@@ -15,7 +15,8 @@ volatile uint32_t elapsed_tick[MAX_SONAR];
 
 void initSonar( int sonar_count )
 {
-  for( int i=0; i<MAX_SONAR; i++ )
+	int i=0;
+  for( i=0; i<MAX_SONAR; i++ )
   {
     distances[i]=NOT_VALID;
     distValid[i] = 0;
@@ -69,7 +70,8 @@ void triggerSonar( int couple )
 
 void convertMeasures()
 {
-  for( int i=0; i<MAX_SONAR; i++ )
+	int i=0;
+  for( i=0; i<MAX_SONAR; i++ )
   {
     if( distValid[i] == 1 )
     {
