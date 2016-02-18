@@ -12,28 +12,28 @@ static DataOut ser_output;
 
 void initSerOutput()
 {
-  ser_output.ctrl_frame_0 = CTRL_FRAME_0;
-  ser_output.byte_count = sizeof(DataOut)-2;
-  ser_output.not_valid_val = NOT_VALID;
-  ser_output.ctrl_frame_1 = CTRL_FRAME_1;  
+	ser_output.ctrl_frame_0 = CTRL_FRAME_0;
+	ser_output.byte_count = sizeof(DataOut)-2;
+	ser_output.not_valid_val = NOT_VALID;
+	ser_output.ctrl_frame_1 = CTRL_FRAME_1;
 }
 
 void sendMeasures()
 {
 	int i=0;
-  ser_output.ticks = HAL_GetTick();
-  memcpy( (void*)ser_output.distances, (void*)distances, MAX_SONAR*sizeof(float) );
-  
-  ser_output.sonar_active = sonarCount;
-  
-  HAL_UART_Transmit( &huart1, (uint8_t*)(&ser_output), sizeof(DataOut), 100 );  
-  
-  // >>>>> Invalidate measures
-  for( i=0; i<MAX_SONAR; i++ )
-  {
-    distances[i]=NOT_VALID;
-    distValid[i] = 0;
-    echo_duration[i] = 0;
-  }
-  // <<<<< Invalidate measures
+	ser_output.ticks = HAL_GetTick();
+	memcpy( (void*)ser_output.distances, (void*)distances, MAX_SONAR*sizeof(float) );
+
+	ser_output.sonar_active = sonarCount;
+
+	HAL_UART_Transmit( &huart1, (uint8_t*)(&ser_output), sizeof(DataOut), 100 );
+
+	// >>>>> Invalidate measures
+	for( i=0; i<MAX_SONAR; i++ )
+	{
+		distances[i]=NOT_VALID;
+		distValid[i] = 0;
+		echo_duration[i] = 0;
+	}
+	// <<<<< Invalidate measures
 }
